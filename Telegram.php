@@ -223,7 +223,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
+     * <td>Sends the message silently. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>message_id</td>
@@ -279,7 +279,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
+     * <td>Sends the message silently. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_markup</td>
@@ -342,7 +342,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
+     * <td>Sends the message silently. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -398,7 +398,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
+     * <td>Sends the message silently. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -486,7 +486,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -604,7 +604,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
+     * <td>Sends the message silently. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -666,7 +666,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
+     * <td>Sends the message silently. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -728,7 +728,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message silently. Users will receive a notification with no sound.</td>
+     * <td>Sends the message silently. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -930,7 +930,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the messages <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+     * <td>Sends the messages <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -2324,7 +2324,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>
@@ -2523,7 +2523,7 @@ class Telegram
      * <td>disable_notification</td>
      * <td>Boolean</td>
      * <td>Optional</td>
-     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. Users will receive a notification with no sound.</td>
+     * <td>Sends the message <a href="https://telegram.org/blog/channels-2-0#silent-messages">silently</a>. users will receive a notification with no sound.</td>
      * </tr>
      * <tr>
      * <td>reply_to_message_id</td>

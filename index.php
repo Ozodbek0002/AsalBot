@@ -7,9 +7,10 @@ $telegram = new Telegram('5516988832:AAGFKzAY-Y2Q8arkPi18PSC2zGfwMPS0JnI');
 $chat_id = $telegram->ChatID();  // foydalanuvchi ID si
 $chat_name = $telegram->FirstName();  // foydalanuvchi nomi
 $text = $telegram->Text(); // foydalanuvchi yuborgan text
-file_put_contents('Users/step.txt','1');
-$stepfile = file_get_contents('Users/step.txt');
-print $stepfile;
+
+file_put_contents('users/step.txt','1');
+$stepfile = file_get_contents('users/step.txt');
+echo $stepfile;
 
 $orderTypes = ["1kg = 25 000 sum","2kg = 50 000 sum","3kg = 75 000 sum","4kg = 100 000 sum" ];
 
