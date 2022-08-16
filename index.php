@@ -10,14 +10,16 @@ $text = $telegram->Text(); // foydalanuvchi yuborgan text
 
 if ($text == '/start') {
     showStart();
-} elseif ($text == '🍯 Biz haqimizda ') {
+}
+elseif ($text == '🍯 Biz haqimizda ') {
     $content = [
         'chat_id' => $chat_id,
         'text' => " Biz haqimizda bilib oling <a href='https://telegra.ph/Biz-haqimizda-08-10'>Link</a> ",
         'parse_mode' => "html"
     ];
     $telegram->sendMessage($content);
-} elseif ($text == '🍯 Buyurtma berish') {
+}
+elseif ($text == '🍯 Buyurtma berish') {
 
 
 }
@@ -26,7 +28,7 @@ if ($text == '/start') {
 //Funksiyalar
 function showStart()
 {
-    global $telegram, $chat_id, $starText;
+    global $telegram, $chat_id ;
     $option = [
         [
             $telegram->buildKeyboardButton("🍯 Biz haqimizda")
