@@ -11,7 +11,7 @@ $text = $telegram->Text(); // foydalanuvchi yuborgan text
 if ($text == '/start') {
     showStart();
 }
-elseif ($text == '🍯 Biz haqimizda ') {
+elseif ($text == '🍯 Biz haqimizda') {
     $content = [
         'chat_id' => $chat_id,
         'text' => " Biz haqimizda bilib oling <a href='https://telegra.ph/Biz-haqimizda-08-10'>Link</a> ",
