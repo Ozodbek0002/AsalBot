@@ -7,7 +7,8 @@ $telegram = new Telegram('5556639565:AAGvOzJy27T4TEizvw958xdidtiyv_xkXRY');
 $chat_id = $telegram->ChatID();  // foydalanuvchi ID si
 $chat_name = $telegram->FirstName();  // foydalanuvchi nomi
 $text = $telegram->Text(); // foydalanuvchi yuborgan text
-
+$data=$telegram->getData();
+$message=$data['message'];
 $orderTypes = ["1kg = 25 000 sum", "2kg = 50 000 sum", "3kg = 75 000 sum", "4kg = 100 000 sum"];
 
 if ($text == "/start") {
@@ -20,6 +21,8 @@ if ($text == "/start") {
     askContact();
 } elseif ($text == "Asosiy"){
     showStart();
+}elseif ($text == "Telefon yuborildi"){
+    askPhone();
 }
 else {
     $content = [
@@ -98,6 +101,8 @@ function showOrder()
 function askContact()
 {
     global $telegram, $chat_id,$text;
+
+    $text = "Telefon yuborildi";
     $option = [
         [
             $telegram->buildKeyboardButton("📱 Telefon raqamni yuborish",$request_contact = true)
@@ -112,5 +117,27 @@ function askContact()
     ];
 
     $telegram->sendMessage($content);
+
 }
 
+function askPhone(){
+    global $telegram,$chat_id,$text;
+    $content = [
+        'chat_id' => $chat_id,
+        'text' => $text,
+    ];
+    $telegram->sendMessage($content);
+
+//    $option=[
+//        [$telegram->buildKeyboardButton("🔻 Joylashuvni yuborish",$request_contact=false,$request_location=true)],
+//        [$telegram->buildKeyboardButton("🚘 O'zim boraman")]
+//    ];
+//    $keyboard=$telegram->buildKeyBoard($option,$onetime=true,$resize=true);
+//    $content=[
+//        'chat_id'=>$chat_id,
+//        'reply_markup'=>$keyboard,
+//        'text'=>"  🗺 Urganch tumani bo'ylab yetkazib berish bepul !\n🚛 Yetkazib berish uchun manzilni kiriting yoki joylashuvni yuboring. Istasangiz o'zingiz kelib olib ketishingiz ham mumkin. \n 🏢 Bizning manzil: Urganch tumani Kattabog' mahallasi Ummon ko'chasi 28-uy"
+//    ];
+//    $telegram->sendMessage($content);
+
+}
