@@ -102,12 +102,15 @@ function askContact()
 {
     global $telegram, $chat_id,$text;
 
-    $text = "Telefon yuborildi";
+//    $text = "Telefon yuborildi";
+
     $option = [
         [
             $telegram->buildKeyboardButton("📱 Telefon raqamni yuborish",$request_contact = true)
         ],
     ];
+
+    askPhone();
 
     $keyb = $telegram->buildKeyBoard($option, $onetime = true, $resize = true);
     $content = [
