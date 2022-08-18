@@ -2,7 +2,7 @@
 
 include 'Telegram.php';
 
-$telegram = new Telegram('5516988832:AAGFKzAY-Y2Q8arkPi18PSC2zGfwMPS0JnI');
+$telegram = new Telegram('5556639565:AAGvOzJy27T4TEizvw958xdidtiyv_xkXRY');
 
 $chat_id = $telegram->ChatID();  // foydalanuvchi ID si
 $chat_name = $telegram->FirstName();  // foydalanuvchi nomi
