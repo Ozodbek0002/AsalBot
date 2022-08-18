@@ -8,7 +8,6 @@ $chat_id = $telegram->ChatID();  // foydalanuvchi ID si
 $chat_name = $telegram->FirstName();  // foydalanuvchi nomi
 $text = $telegram->Text(); // foydalanuvchi yuborgan text
 
-
 $orderTypes = ["1kg = 25 000 sum", "2kg = 50 000 sum", "3kg = 75 000 sum", "4kg = 100 000 sum"];
 
 if ($text == '/start') {
@@ -21,7 +20,6 @@ if ($text == '/start') {
     askContact();
 }
 else {
-
     $content = [
         'chat_id' => $chat_id,
         'text' => $text,
