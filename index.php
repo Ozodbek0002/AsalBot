@@ -100,15 +100,15 @@ function askContact()
     global $telegram, $chat_id,$text;
     $option = [
         [
-            $telegram->buildKeyboardButton("Raqamni jo`natish",$request_contact = true)
+            $telegram->buildKeyboardButton("📱 Telefon raqamni yuborish",$request_contact = true)
         ],
     ];
-    $text = "/start";
-    $keyb = $telegram->buildKeyBoard($option, $onetime = false, $resize = true);
+
+    $keyb = $telegram->buildKeyBoard($option, $onetime = true, $resize = true);
     $content = [
         'chat_id' => $chat_id,
         'reply_markup' => $keyb,
-        'text' => "Malumot qabul qilindi",
+        'text' => "✅ Kerakli miqdor tanlandi . Telefon raqamingizni yuboring 👇",
     ];
 
     $telegram->sendMessage($content);
