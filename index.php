@@ -97,13 +97,13 @@ function showOrder()
 
 function askContact()
 {
-    global $telegram, $chat_id;
+    global $telegram, $chat_id,$text;
     $option = [
         [
             $telegram->buildKeyboardButton("Raqamni jo`natish",$request_contact = true)
         ],
     ];
-
+    $text = "/start";
     $keyb = $telegram->buildKeyBoard($option, $onetime = false, $resize = true);
     $content = [
         'chat_id' => $chat_id,
