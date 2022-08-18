@@ -21,9 +21,9 @@ if ($text == '/start') {
     askContact();
 }
 else {
+
     $content = [
         'chat_id' => $chat_id,
-        'reply_markup' => $keyb,
         'text' => $text,
     ];
     $telegram->sendMessage($content);
