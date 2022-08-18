@@ -18,6 +18,8 @@ if ($text == "/start") {
     showOrder();
 } elseif (in_array($text, $orderTypes)) {
     askContact();
+} elseif ($text == "Asosiy"){
+    showStart();
 }
 else {
     $content = [
@@ -49,6 +51,9 @@ function showStart()
         ],
         [
             $telegram->buildKeyboardButton("🍯 Buyurtma berish")
+        ],
+        [
+            $telegram->buildKeyboardButton("Asosiy")
         ]
     ];
 
@@ -68,17 +73,16 @@ function showOrder()
     global $telegram, $chat_id;
     $option = [
         [
-            $telegram->buildKeyboardButton("1kg = 25 000 sum")
+            $telegram->buildKeyboardButton("1kg = 25 000 sum"), $telegram->buildKeyboardButton("2kg = 50 000 sum")
         ],
+
         [
-            $telegram->buildKeyboardButton("2kg = 50 000 sum")
+            $telegram->buildKeyboardButton("3kg = 75 000 sum"), $telegram->buildKeyboardButton("4kg = 100 000 sum")
         ],
+
         [
-            $telegram->buildKeyboardButton("3kg = 75 000 sum")
-        ],
-        [
-            $telegram->buildKeyboardButton("4kg = 100 000 sum")
-        ],
+            $telegram->buildKeyboardButton("Asosiy")
+        ]
     ];
 
     $keyb = $telegram->buildKeyBoard($option, $onetime = false, $resize = true);
@@ -104,8 +108,9 @@ function askContact()
     $content = [
         'chat_id' => $chat_id,
         'reply_markup' => $keyb,
-        'text' => " Malumot qabul qilindi ",
+        'text' => "Malumot qabul qilindi",
     ];
+
     $telegram->sendMessage($content);
 }
 
