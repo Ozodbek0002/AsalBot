@@ -11,6 +11,7 @@ $data=$telegram->getData();
 $message=$data['message'];
 $orderTypes = ["1kg = 25 000 sum", "2kg = 50 000 sum", "3kg = 75 000 sum", "4kg = 100 000 sum"];
 
+$step = 0;
 if ($text == "/start") {
     showStart();
 } elseif ($text == "🍯 Biz haqimizda") {
@@ -21,7 +22,7 @@ if ($text == "/start") {
     askContact();
 } elseif ($text == "Asosiy"){
     showStart();
-}elseif ($text == "Telefon yuborildi"){
+}elseif ( $step==1 ) {
     askPhone();
 }
 else {
@@ -100,17 +101,17 @@ function showOrder()
 
 function askContact()
 {
-    global $telegram, $chat_id,$text;
-
-//    $text = "Telefon yuborildi";
-
+    global $telegram, $chat_id,$step;
+    $step = 1;
     $option = [
         [
             $telegram->buildKeyboardButton("📱 Telefon raqamni yuborish",$request_contact = true)
         ],
+        [
+            $telegram->buildKeyboardButton("Asosiy")
+        ]
     ];
 
-    askPhone();
 
     $keyb = $telegram->buildKeyBoard($option, $onetime = true, $resize = true);
     $content = [
@@ -127,7 +128,7 @@ function askPhone(){
     global $telegram,$chat_id,$text;
     $content = [
         'chat_id' => $chat_id,
-        'text' => $text,
+        'text' => " Malumot saqlandi tez orada siz bilan bog`lanamiz",
     ];
     $telegram->sendMessage($content);
 
