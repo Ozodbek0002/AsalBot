@@ -24,7 +24,8 @@ if ($text == "/start") {
 else {
     $content = [
         'chat_id' => 1366931310,
-        'text' => $text,
+        'text' => "ismi :  $chat_name
+                   tel : $text ",
     ];
     $telegram->sendMessage($content);
 }
