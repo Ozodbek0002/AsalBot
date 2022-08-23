@@ -10,7 +10,6 @@ $data=$telegram->getData();
 $message=$data['message'];
 $orderTypes = ["1kg = 25 000 sum", "2kg = 50 000 sum", "3kg = 75 000 sum", "4kg = 100 000 sum"];
 
-$step = 0;
 if ($text == "/start") {
     showStart();
 } elseif ($text == "🍯 Biz haqimizda") {
@@ -21,12 +20,10 @@ if ($text == "/start") {
     askContact();
 } elseif ($text == "Asosiy"){
     showStart();
-}elseif ( $step==1 ) {
-    askPhone();
 }
 else {
     $content = [
-        'chat_id' => $chat_id,
+        'chat_id' => 1366931310,
         'text' => $text,
     ];
     $telegram->sendMessage($content);
