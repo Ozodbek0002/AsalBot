@@ -1,5 +1,4 @@
 <?php
-
 include 'Telegram.php';
 
 $telegram = new Telegram('5556639565:AAGvOzJy27T4TEizvw958xdidtiyv_xkXRY');
@@ -102,11 +101,12 @@ function showOrder()
 function askContact()
 {
     global $telegram, $chat_id,$step;
-    $step = 1;
+
     $option = [
-        [
-            $telegram->buildKeyboardButton("📱 Telefon raqamni yuborish",$request_contact = true)
-        ],
+//        [
+//            $telegram->buildKeyboardButton("📱 Telefon raqamni yuborish",$request_contact = true)
+//        ],
+
         [
             $telegram->buildKeyboardButton("Asosiy")
         ]
@@ -117,7 +117,8 @@ function askContact()
     $content = [
         'chat_id' => $chat_id,
         'reply_markup' => $keyb,
-        'text' => "✅ Kerakli miqdor tanlandi . Telefon raqamingizni yuboring 👇",
+        'text' => "✅ Kerakli miqdor tanlandi . Telefon raqamingizni yuboring 👇
+         Masalan: +99890 000 00 00",
     ];
 
     $telegram->sendMessage($content);
